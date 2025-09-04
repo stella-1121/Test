@@ -125,3 +125,9 @@
     border-radius: 0%; /* Kembali menjadi kotak */
   }
 }
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  img {
+    width: 100%;
+  }
+}
