@@ -1,0 +1,127 @@
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        img{
+            border-radius: 200px;
+            animation-name: gerak-kompleks;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; /* Bergerak bolak-balik */
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            
+        }
+        .box {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        } 
+        .box h3 {
+            margin-top: 0;
+        }
+        .box p {
+            color: #666;
+        }
+        .box a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+             
+  
+            
+        }
+         a:hover{
+            background-color:blue;
+            text-decoration: none;
+           
+             
+        }
+        .animated-button {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px #95a5a6; /* Tambahkan bayangan untuk efek 3D */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.animated-button:active {
+  transform: translateY(2px);
+  background-color: #2980b9;
+  box-shadow: 0 2px #7f8c8d; /* Mengurangi bayangan saat tombol ditekan */
+}
+/* Definisikan animasinya */
+@keyframes gerak-persegi {
+  0% {
+    /* Keadaan awal */
+    transform: translate(0, 0);
+  }
+  25% {
+    /* Gerak ke kanan */
+    transform: translate(200px, 0);
+  }
+  50% {
+    /* Gerak ke bawah */
+    transform: translate(200px, 200px);
+  }
+  75% {
+    /* Gerak ke kiri */
+    transform: translate(0, 200px);
+  }
+  100% {
+    /* Kembali ke awal */
+    transform: translate(0, 0);
+  }
+}
+@keyframes gerak-kompleks {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    background-color: dodgerblue;
+    border-radius: 0%;
+  }
+  25%{
+    transform: translate(200px,0) rotate(90deg);
+    border-radius: 50%;
+  }
+  50% {
+    transform: translate(200px, 200px) rotate(180deg);
+    background-color: crimson;
+    border-radius: 0%; /* Menjadi lingkaran */
+  }
+  75%{
+    transform: translate(-300px, 200px);rotate:(270deg);
+    border-radius: 50%;
+  }
+  85%{
+    transform: translate(-300px, 0);rotate:(270deg);
+    border-radius: 50%;
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+    background-color: dodgerblue;
+    border-radius: 0%; /* Kembali menjadi kotak */
+  }
+}
